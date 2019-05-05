@@ -1,0 +1,26 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest --no-cache"
+  },
+  "engines": {
+    "node": ">=7.6"
+  },
+  "engineStrict": true,
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./.jest-coverage"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  }
+}

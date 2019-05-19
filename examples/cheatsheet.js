@@ -13,6 +13,8 @@ const { log, runExamples } = require('./helpers');
 /* Examples */
 const examples = {
 
+	'Simple example': () => log(simpleExample),
+
 };
 
 /* Main */

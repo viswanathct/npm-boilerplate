@@ -1,5 +1,3 @@
-const { expectMockCalls } = require("./helpers");
-
 describe('Functionality of the package.', () => {
 
 	/* Test Targets */
@@ -11,6 +9,6 @@ describe('Functionality of the package.', () => {
 	/* Setup */
 
 	/* Tests */
-	test('A test template.', async () => {
+	test('A test template.', () => {
 	});
 });

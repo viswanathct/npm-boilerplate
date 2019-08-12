@@ -1,5 +1,5 @@
 /**
- * The cheatsheet.
+ * The cheat-sheet.
  */
 
 /* Targets */
@@ -9,12 +9,10 @@ const { log, runExamples } = require('./helpers');
 
 /* Data */
 
-
 /* Examples */
 const examples = {
 
-	'Simple example': () => log(simpleExample),
-
+	'Simple example': () => log(),
 };
 
 /* Main */
@@ -22,4 +20,4 @@ runExamples(examples);
 
 module.exports = {
 	examples,
-}
+};

@@ -9,4 +9,4 @@ const expectMockCalls = (fn) => (expectation) =>
 module.exports = {
 
 	expectMockCalls,
-}
+};

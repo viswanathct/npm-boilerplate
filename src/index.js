@@ -1,7 +1,12 @@
-/**
- * Package Name
- */
+/* The main entry. */
 
-module.exports = {
+import { log } from 'util';
 
+/* Tasks */
+const main = () => {
+	log('Starting...');
+};
+
+export {
+	main,
 };

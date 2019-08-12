@@ -1,14 +1,9 @@
-describe('Functionality of the package.', () => {
+import { main } from '../src';
 
-	/* Test Targets */
+describe('the package', () => {
 
-	/* Helpers */
+	test('the main entry point', () => {
 
-	/* Mocks */
-
-	/* Setup */
-
-	/* Tests */
-	test('A test template.', () => {
+		main();
 	});
 });

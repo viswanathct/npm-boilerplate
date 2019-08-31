@@ -3,5 +3,5 @@
 *
 **
 
-# except the src dir.
-!/src/**
+# except the dist dir.
+!/dist/**

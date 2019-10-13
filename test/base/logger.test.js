@@ -14,8 +14,8 @@ describe('the config', () => {
 	});
 
 	test('When the environment is production the logger'
-		+ 'doesn\'t prettyPrint.', () => {
-		mockConfigModule.env = 'production';
+		+ ' doesn\'t prettyPrint.', () => {
+		mockConfigModule.environment = 'production';
 
 		require('../../src/base/logger');
 
@@ -26,7 +26,7 @@ describe('the config', () => {
 
 	test('When the environment is not production the logger'
 		+ 'does prettyPrint.', () => {
-		mockConfigModule.env = 'development';
+		mockConfigModule.environment = 'development';
 
 		require('../../src/base/logger');
 

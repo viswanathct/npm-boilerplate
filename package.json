@@ -53,5 +53,8 @@
   "directories": {
     "example": "examples",
     "test": "test"
+  },
+  "dependencies": {
+    "pino": "^5.13.4"
   }
 }

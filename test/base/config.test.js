@@ -13,21 +13,21 @@ describe('the config', () => {
 
 	test('The env-var NODE_ENV is mapped to config.env', () => {
 		mockEnv.NODE_ENV = 'production';
-		const { config } = require('../../src/config');
+		const { config } = require('../../src/base/config');
 
 		expect(config.env).toEqual('production');
 	});
 
 	test('When NODE_ENV is not present config.env is development', () => {
 		delete mockEnv.NODE_ENV;
-		const { config } = require('../../src/config');
+		const { config } = require('../../src/base/config');
 
 		expect(config.env).toEqual('development');
 	});
 
 	test('Environment variables are available as config.envVars', () => {
 		mockEnv.someVar = Symbol('someVar');
-		const { config } = require('../../src/config');
+		const { config } = require('../../src/base/config');
 
 		expect(config.envVars).toEqual(mockEnv);
 	});

@@ -1,11 +1,11 @@
 /* The main entry. */
 
-import { log } from 'util';
-import { config } from './config';
+import { config } from './base/config';
+import { logger } from './base/logger';
 
 /* Tasks */
 const main = () => {
-	log(`Starting in ${ config.env } environment.`);
+	logger.info(`Starting in ${ config.env } environment.`);
 };
 
 export {

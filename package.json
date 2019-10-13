@@ -4,10 +4,11 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "jest --no-cache",
-    "lint": "eslint ./",
+    "dev": "node -e 'require(\"./dist/index.js\").main()'",
     "build": "babel -d ./dist ./src",
-    "dev": "node -e 'require(\"./dist/index.js\").main()'"
+    "start": "npm run build && npm run dev",
+    "test": "jest --no-cache",
+    "lint": "eslint ./"
   },
   "engines": {
     "node": ">=7.6"

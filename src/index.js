@@ -5,8 +5,7 @@ import { config } from './config';
 
 /* Tasks */
 const main = () => {
-	log('Starting with config:');
-	log(JSON.stringify(config));
+	log(`Starting in ${ config.env } environment.`);
 };
 
 export {

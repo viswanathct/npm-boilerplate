@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "dev": "node -e 'require(\"./dist/index.js\").main()'",
-    "build": "babel -d ./dist ./src",
+    "build": "rm -rf ./dist && babel --ignore '**/*.spec.js' -d ./dist ./src",
     "start": "npm run build && npm run dev",
     "test": "jest --no-cache",
     "lint": "eslint ./"

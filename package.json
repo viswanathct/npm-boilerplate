@@ -52,6 +52,9 @@
     },
     "resetMocks": true,
     "resetModules": true,
+    "setupFilesAfterEnv": [
+      "./test/setup/jest.setup.js"
+    ],
     "transform": {
       "^.+\\.js?$": "babel-jest"
     }

@@ -37,7 +37,6 @@
     "regenerator-runtime": "^0.13.2"
   },
   "jest": {
-    "automock": true,
     "collectCoverage": true,
     "collectCoverageFrom": [
       "./src/**/*.js"

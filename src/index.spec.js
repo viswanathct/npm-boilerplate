@@ -1,6 +1,6 @@
 /* Mocks and Stubs */
 jest.mock('./base/logger');
-import { logger } from "./base/logger";
+import logger from "./base/logger";
 
 /* Tests */
 import { main } from '.';

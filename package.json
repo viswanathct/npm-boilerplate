@@ -41,7 +41,10 @@
       "^.+\\.js?$": "babel-jest"
     },
     "collectCoverage": true,
-    "coverageDirectory": "./.jest-coverage",
+    "collectCoverageFrom": [
+      "./src/**/*.js"
+    ],
+    "coverageDirectory": "./.coverage",
     "coverageThreshold": {
       "global": {
         "branches": 0,

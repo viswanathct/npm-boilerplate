@@ -7,7 +7,7 @@ jest.mock('../../src/base/config', () => ({
 }));
 jest.mock('pino', () => mockPino);
 
-describe('the config', () => {
+describe('the logger', () => {
 	beforeEach(() => {
 		jest.resetModules();
 		jest.resetAllMocks();
@@ -25,7 +25,7 @@ describe('the config', () => {
 	});
 
 	test('When the environment is not production the logger'
-		+ 'does prettyPrint.', () => {
+		+ ' does prettyPrint.', () => {
 		mockConfigModule.environment = 'development';
 
 		require('../../src/base/logger');

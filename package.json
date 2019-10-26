@@ -37,9 +37,7 @@
     "regenerator-runtime": "^0.13.2"
   },
   "jest": {
-    "transform": {
-      "^.+\\.js?$": "babel-jest"
-    },
+    "automock": true,
     "collectCoverage": true,
     "collectCoverageFrom": [
       "./src/**/*.js"
@@ -52,6 +50,11 @@
         "lines": 0,
         "statements": 0
       }
+    },
+    "resetMocks": true,
+    "resetModules": true,
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
     }
   },
   "directories": {

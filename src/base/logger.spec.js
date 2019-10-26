@@ -2,22 +2,23 @@
 const mockConfigModule = {};
 const mockPino = jest.fn();
 
-jest.mock('../../src/base/config', () => ({
+/* Helpers */
+const forceRequire = (module) => {
+	jest.unmock(module);
+	return require(module);
+}
+
+jest.mock('./config', () => ({
 	config: mockConfigModule,
 }));
 jest.mock('pino', () => mockPino);
 
 describe('the logger', () => {
-	beforeEach(() => {
-		jest.resetModules();
-		jest.resetAllMocks();
-	});
-
 	test('When the environment is production the logger'
 		+ ' doesn\'t prettyPrint.', () => {
 		mockConfigModule.environment = 'production';
 
-		require('../../src/base/logger');
+		forceRequire('./logger');
 
 		expect(mockPino).toBeCalledWith({
 			prettyPrint: false,
@@ -28,7 +29,7 @@ describe('the logger', () => {
 		+ ' does prettyPrint.', () => {
 		mockConfigModule.environment = 'development';
 
-		require('../../src/base/logger');
+		forceRequire('./logger');
 
 		expect(mockPino).toBeCalledWith({
 			prettyPrint: {

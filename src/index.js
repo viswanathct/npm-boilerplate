@@ -4,8 +4,8 @@ import config from './base/config';
 import logger from './base/logger';
 
 /* Tasks */
-const main = () => {
-	logger.info(`Starting in ${ config.environment } environment.`);
+const main = async () => {
+	await logger.info(`Starting in ${ config.environment } environment.`);
 };
 
 export {

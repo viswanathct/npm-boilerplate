@@ -5,14 +5,12 @@
   "main": "./index.js",
   "scripts": {
     "start": "npm run build && npm run dev",
-    "build": "rm -rf ./dist && babel --ignore '**/*.spec.js' -d ./dist ./src && npm run copy",
-    "dev": "node -e 'require(\"./dist/index.js\").main()'",
     "test": "jest --no-cache",
+    "dist": "npm run checkAndBuild && cd dist && npm publish --access public",
+    "build": "rm -rf ./dist && babel --ignore '**/*.spec.js' -d ./dist ./src && npm run copy",
     "lint": "eslint .",
-    "prepare": "npm run lint && npm test && npm run build",
-    "copy": "cp ./package.json ./ReadMe.md ./LICENSE ./dist/",
-    "prepublishOnly": "echo \"Error: Don't run 'npm publish' in root. Use 'npm run dist' instead.\" && exit 1",
-    "dist": "npm run prepare && cd dist && npm publish --ignore-scripts"
+    "checkAndBuild": "npm run lint && npm test && npm run build",
+    "copy": "cp ./package.json ./ReadMe.md ./LICENSE ./dist/"
   },
   "engines": {
     "node": ">=7.6"
@@ -61,6 +59,7 @@
     "setupFilesAfterEnv": [
       "./test/setup/jest.setup.js"
     ],
+    "testPathIgnorePatterns": ["/node_modules/", "/dist/"],
     "transform": {
       "^.+\\.js?$": "babel-jest"
     }
